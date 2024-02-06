@@ -1,14 +1,25 @@
-//template literal
-let name = "ahsan"
-//console.log(`this is my name ${name}`)
 
-//Destructuring Assignment:
-let a = [1,2,3,4,5,6]
-const [c,d] = a
-obj = {
-    id : 1,
-    s : 'ahsan',
-    first : {d : 1,c : 5}
+//spread operator
+{
+    let ar = [1,2,4,]
+    let br = [3,5]
+    let conct = [...ar,...br]
+    console.log(conct)
 }
-const {first : {c : k}} = obj
-console.log(k)
+
+//rest operator
+{
+    function sum(...theArgs) {
+        let total = 0;
+        for (const arg of theArgs) {
+          total += arg;
+        }
+        return total;
+      }
+      
+      console.log(sum(1, 2, 3));
+      // Expected output: 6
+      
+      console.log(sum(1, 2, 3, 4));
+      // Expected output: 10
+}
