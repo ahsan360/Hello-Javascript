@@ -1,25 +1,5 @@
-
-//spread operator
-{
-    let ar = [1,2,4,]
-    let br = [3,5]
-    let conct = [...ar,...br]
-    console.log(conct)
-}
-
-//rest operator
-{
-    function sum(...theArgs) {
-        let total = 0;
-        for (const arg of theArgs) {
-          total += arg;
-        }
-        return total;
-      }
-      
-      console.log(sum(1, 2, 3));
-      // Expected output: 6
-      
-      console.log(sum(1, 2, 3, 4));
-      // Expected output: 10
-}
+import {k,text,settxt} from "./sum.js"; // note that we have the freedom to use import m instead of import k, because k was default export
+console.log(k(1,2,3,4)); // 12
+console.log(text)
+settxt("set from day1")
+console.log(text)
