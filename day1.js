@@ -1,13 +1,15 @@
-fun = (val)=>{
+fun = (val) =>{
     return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            console.log(`Data ${val}`)
-            resolve("success")
-        }, 2000);
+        setTimeout(()=>{
+            console.log(`data ${val}`)
+            resolve()
+        },3000)
     })
 }
-fun(1).then((res)=>{
-   return fun(2)
-}).then((res)=>{
-    console.log(res)
-})
+ 
+async function d (){
+    await fun(1);
+    await fun(2);
+    await fun(3);
+}
+d()
