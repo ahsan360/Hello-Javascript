@@ -1,14 +1,18 @@
-// program to show try...catch in a program
-
-const numerator= 100, denominator = 'a';
-
-try {
-     console.log(numerator/denominator);
-
-    // forgot to define variable a      
-    console.log(a);
+getNum = (id,nxtNum)=>{
+    setTimeout(() => {
+        console.log(` ${id}`)
+        if(nxtNum) {
+            nxtNum()
+        }
+    
+    }, 2000)
+   
 }
-catch(error) {
-    console.log('An error caught'); 
-    console.log('Error message: ' + error);  
-}
+
+getNum("hey mushahid", ()=>{
+    getNum("tell me about your trusty",()=>{
+        getNum("are you going to marry her",()=>{
+            getNum("if yes then okey we are going to arrange it thank you")
+        })
+    })
+})
